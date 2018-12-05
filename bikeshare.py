@@ -186,10 +186,12 @@ def user_stats(df, city):
 
     # Display counts of gender
     if city not in('Chicago', 'New York City'):
-        print("\nSorry, gender statistics for Washington are not available.")
-    else:
-        print("\nGender statistics of users...")
-        print(df['Gender'].value_counts())
+        genders = df['Gender'].value_counts()
+        print("Gender:")
+        print(genders)
+        print()
+    except KeyError:
+        print("There isn't a [Gender] column in this spreedsheet!")
 
     # Display earliest, most recent, and most common year of birth
     if city not in('Chicago', 'New York City'):
