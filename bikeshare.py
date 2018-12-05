@@ -24,7 +24,7 @@ def get_filters():
         except KeyboardInterrupt:
             print("\nSorry, an error occurred.\n")
             continue
-        if city not in ('Chicago', 'New York City', 'Washington'):
+        if city in CITY_DATA.keys():
             print("Sorry, I do not understand your input. Please input either Chicago, New York, or Washington.\n")
         else:
             break
