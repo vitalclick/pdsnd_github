@@ -32,7 +32,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     while True:
         try:
-            month = input("\nPlease enter the month of the year for which you would like to see the statistics by typing one of the following. Jan, Feb, Mar, Apr, May, Jun. Otherwise, enter 'all' to access data from all six months...  ").title()
+            month = input("\nPlease enter one of the following. Jan, Feb, Mar, Apr, May, Jun. Otherwise, enter 'all' to access data from all six months...  ").title()
         except KeyboardInterrupt:
             print("\nSorry, an error occurred.\n")
             continue
